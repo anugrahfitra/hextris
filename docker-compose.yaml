@@ -1,0 +1,12 @@
+services:
+  app:
+    image: anugrahfitra/web-hextris-image
+    container_name: web-hextris
+    build: .
+    ports:
+      - "8010:80"
+    volumes:
+      - nginx-vol:/var/www/html/
+
+volumes:
+  nginx-vol:
